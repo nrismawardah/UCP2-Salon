@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Taylor | Home</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <style>
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            /* Jarak antara gambar dan teks */
+            margin-left: 250px;
+            margin-right: 250px;
+        }
+
+        .about-image {
+            flex: 0 0 auto;
+            /* Biarkan gambar tetap di ukuran aslinya */
+        }
+
+        .about-image img {
+            max-width: 350px;
+            /* Gambar maksimum lebar 100% dari container */
+            height: 350px;
+            /* Biarkan tinggi gambar otomatis */
+            display: block;
+            /* Atur agar gambar berada dalam blok */
+            border-radius: 5px;
+            /* Tambahkan sudut membulat */
+        }
+
+        .about-text {
+            flex: 1;
+            /* Biarkan teks mengambil sisa ruang */
+        }
+
+        .about-text h2 {
+            font-size: 1.5em;
+            /* Ukuran font untuk header 2 */
+            margin-bottom: 10px;
+            /* Jarak bawah untuk header 2 */
+        }
+
+        .about-text p {
+            font-size: 1em;
+            /* Ukuran font untuk paragraf */
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                /* Stack elemen saat layar lebih kecil */
+                text-align: center;
+                /* Pusatkan teks di tengah saat di atas satu sama lain */
+            }
+
+            .about-image {
+                order: -1;
+                /* Geser gambar ke atas dalam urutan tampilan */
+            }
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            position: relative;
+        }
+
+        .contact-overlay {
+            background: #c273b476;
+            /* White overlay with opacity */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .contact-content .button {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #cccccc;
+            border-radius: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-content .button:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo1.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <video autoplay muted loop class="background-video">
+            <source src="assets/home-video.mp4" type="video/mp4">
+        </video>
+        <div class="overlay" style="height: 360px; width: 1500px; align-content: center;">
+            <h1>❝ Saint Taylor ❞</h1>
+            <h4>We provide the best service, Tap for more</h4>
+            <a href="about.html" class="button">More</a>
+        </div>
+    </section>
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/about2.jpeg" alt="Tentang Kami" style="width: 500px; height: auto;">
+                </div>
+                <div class="about-text">
+                    <h2>Quote of the day</h2>
+                    <p>❝True beauty in a woman is reflected in her soul. It’s the caring that she lovingly gives, the
+                        passion that she shows.❞ </p>
+                    <p>– Audrey Hepburn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services" style="background-color: #c273b476;">
+        <h2 style="margin-top: -15px;">Our Best Service</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="assets/service.jpeg" alt="Service">
+                <p>Nail Art</p>
+            </div>
+            <div class="card">
+                <img src="assets/service1.jpeg" alt="Service 1">
+                <p>Eyelash Extension</p>
+            </div>
+            <div class="card">
+                <img src="assets/service2.jpeg" alt="Service 2">
+                <p>Facial</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="contact-overlay">
+            <div class="contact-content">
+                <p>Interested in getting our best service? Tap the contact below</p>
+                <a href="contact.html" class="button">Our Contact</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo" style="margin-left: 100px;">
+                <img src="assets/logo1.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <a href="mailto:sainttaylor@gmail.com">sainttaylor@gmail.com</a>
+                <a href="https://wa.me/08111122233344">+62 8111122233344</a>
+            </div>
+            <div class="social-icons" style="margin-right: 50px;">
+                <a href="https://www.facebook.com/profile.php?id=100011082191542&mibextid=LQQJ4d"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kak_gem11"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@kakakgem"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

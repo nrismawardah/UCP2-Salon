@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Taylor | About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .about-hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .about-hero h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h2 {
+            font-size: 32px;
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            flex: 1 1 calc(25% - 20px);
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .product img {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        .product p {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            border-radius: 8px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .modal-content p {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .services-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 100px;
+        }
+
+        .services-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-icon-row {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .service-icon {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+            flex: 1;
+        }
+
+        .service-icon i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .service-icon p {
+            font-size: 16px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo1.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="about-hero">
+        <img src="assets/about3.jpeg" alt="Salon Image" class="background-image">
+        <h1 style="color: #000;">❝ About Us ❞</h1>
+    </section>
+    <section class="about-content">
+        <h2>Our Services</h2>
+        <p style="text-align: center;">Here are some of our services.</p>
+        <div class="products">
+            <div class="product">
+                <img src="assets/creambath.jpg" alt="creambath" data-description="Nourishing hair treatment that revitalizes your scalp and hair, leaving it soft, shiny, and deeply conditioned.">
+                <p>Creambath</p>
+            </div>
+            <div class="product">
+                <img src="assets/service.jpeg" alt="nailart" data-description="Nail art aims to decorate and beautify nails with various creative designs.">
+                <p>Nail Art</p>
+            </div>
+            <div class="product">
+                <img src="assets/service1.jpeg" alt="eyelash" data-description="Eyelash extensions aim to provide longer, thicker, and fuller eyelashes compared to natural lashes.">
+                <p>Eyelash Extensions</p>
+            </div>
+            <div class="product">
+                <img src="assets/service2.jpeg" alt="facial" data-description="Select from various facials tailored to your skin's needs, including options like brightening masks, anti-aging treatments, or masks for sensitive skin.">
+                <p>Facial</p>
+            </div>
+            <div class="product">
+                <img src="assets/haircoloring.jpeg" alt="haircoloring" data-description="Discover the perfect hair color for you with options ranging from natural shades to bold hues, applied using professional techniques for long-lasting results.">
+                <p>Hair Coloring</p>
+            </div>
+            <div class="product">
+                <img src="assets/haircut.jpeg" alt="haircut" data-description="Choose from a variety of modern haircuts that suit your face shape, from chic bobs to elegant layers.">
+                <p>Hair Cut</p>
+            </div>
+            <div class="product">
+                <img src="assets/massage.jpeg" alt="massage" data-description="Choose a massage technique that suits you, such as Swedish massage for deep relaxation or deep tissue massage to relieve muscle tension.">
+                <p>Massage</p>
+            </div>
+            <div class="product">
+                <img src="assets/Microdermabrasion.jpeg" alt="microdermabrasion" data-description="A technique that helps reduce blemishes and acne scars, rejuvenating your skin by smoothing texture and providing a healthy glow.">
+                <p>Microdermabrasion</p>
+            </div>
+        </div>
+    </section>
+        <h2 style="text-align: center; margin-top: 80px;">Why You Should Choose Us?</h2>
+        <p style="text-align: center;">Here are the reasons why you should choose us to beautify yourself.</p>
+    <section class="services-section">
+        <div class="services-icons">
+            <div class="service-icon-row">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <p><strong>Proffesional</strong></p>
+                        <p>Our team consists of experienced and trained professionals in the field of beauty.</p>
+                    </div>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-leaf"></i>
+                    <div>
+                        <p><strong>Best Quality</strong></p>
+                        <p>We only use the best products that are safe and effective for your skin and hair.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-icon-row">
+                <div class="service-icon">
+                    <i class="fas fa-spa"></i>
+                    <div>
+                        <p><strong>Best Service</strong></p>
+                        <p>You will be greeted with friendliness and warmth by our team who cares about your needs.</p>
+                    </div>
+                </div>
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <p><strong>Best Place</strong></p>
+                        <p>Our salon is designed to provide maximum comfort, so you can relax and enjoy your treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services-image">
+            <img src="assets/salon1.jpeg" alt="Salon" style="width: 400px; height: auto; border-radius: 20px;">
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo" style="margin-left: 100px;">
+                <img src="assets/logo1.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <a href="mailto:sainttaylor@gmail.com">sainttaylor@gmail.com</a>
+                <a href="https://wa.me/08111122233344">+62 8111122233344</a>
+            </div>
+            <div class="social-icons" style="margin-right: 50px;">
+                <a href="https://www.facebook.com/profile.php?id=100011082191542&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kak_gem11"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@kakakgem"><i class="fab fa-tiktok"></i></a>
+            </div>            
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="" alt="Product Image" id="modal-image">
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('productModal');
+            var span = document.getElementsByClassName('close')[0];
+
+            span.onclick = function() {
+                modal.style.display = 'none';
+            };
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            };
+
+            var products = document.getElementsByClassName('product');
+
+            for (var i = 0; i < products.length; i++) {
+                products[i].addEventListener('click', function() {
+                    var productImage = this.querySelector('img');
+                    var productDescription = productImage.getAttribute('data-description');
+
+                    var modalImage = document.getElementById('modal-image');
+                    var modalDescription = document.getElementById('modal-description');
+
+                    modalImage.src = productImage.src;
+                    modalDescription.textContent = productDescription;
+                    modal.style.display = 'block';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

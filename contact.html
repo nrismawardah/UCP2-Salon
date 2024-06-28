@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Taylor | Contact</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <script>
+        function showAlert() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+        }
+    </script>
+    <style>
+        .contact-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .contact-form {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #c273b476;
+        }
+
+        .contact-infos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contact-info div,
+        .contact-info iframe {
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/logo1.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="contact-form-container">
+        <h1 style="text-align: center;">Contact Us</h1>
+        <p style="text-align: center;">Contact us via the form below.</p>
+        <section class="contact-form" style="margin-top: 50px;">
+            <form onsubmit="showAlert(); return false;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </section>
+    
+    <section class="contact-infos" style="margin-top: 50px; margin-bottom: 50px; margin-left: 300px; margin-right: 300px;">
+        <div>
+            <h2>Our Contact</h2>
+            <p>Make a reservation? contact the following contact.</p>
+            <p><strong>Phone: </strong><a href="https://wa.me/08111122233344">+62 8111122233344</a></p>
+            <p><strong>Email: </strong><a href="mailto:loremipsum@gmail.com">sainttaylor@gmail.com</a></p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509708!2d144.9537363153188!3d-37.81627977975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d08e5c6dd1!2sVictoria%20State%20Library!5e0!3m2!1sen!2sau!4v1602829923175!5m2!1sen!2sau" width="300px" height="300px" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo" style="margin-left: 100px;">
+                <img src="assets/logo1.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <a href="mailto:sainttaylor@gmail.com">sainttaylor@gmail.com</a>
+                <a href="https://wa.me/08111122233344">+62 8111122233344</a>
+            </div>
+            <div class="social-icons" style="margin-right: 50px;">
+                <a href="https://www.facebook.com/profile.php?id=100011082191542&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kak_gem11"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@kakakgem"><i class="fab fa-tiktok"></i></a>
+            </div>            
+        </div>
+    </footer>
+</body>
+</html>
